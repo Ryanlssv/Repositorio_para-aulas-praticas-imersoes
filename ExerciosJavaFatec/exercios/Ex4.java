@@ -1,6 +1,6 @@
 package exercios;
-import java.util.Scanner;
 
+import java.util.Scanner;
 public class Ex4 {
 
 	public static void main(String[] args) {
