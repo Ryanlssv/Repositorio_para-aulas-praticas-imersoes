@@ -20,7 +20,7 @@ const pool = new Pool({
   port: 5432,
 });
 
-// Get all documents
+// Pega todos os documentos
 app.get('/documents', async (req, res) => {
     try {
       const result = await pool.query('SELECT * FROM documents');
@@ -32,7 +32,7 @@ app.get('/documents', async (req, res) => {
   });
   
 
-// Delete a document by ID
+// Deleta docs pelo ID
 app.delete('/documents/:id', async (req, res) => {
     const { id } = req.params;
     try {
@@ -49,7 +49,7 @@ app.delete('/documents/:id', async (req, res) => {
   
 
 
-// Add a new document
+// Add novo documento
 app.post('/documents', async (req, res) => {
   const { title } = req.body;
   try {
@@ -64,7 +64,7 @@ app.post('/documents', async (req, res) => {
   }
 });
 
-// Start the server
+// começa o servidor
 
 app.get('/', (req, res) => {
     res.send('Servidor está rodando! 🚀');
